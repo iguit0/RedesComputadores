@@ -4,13 +4,14 @@ import json
 import io
 import struct
 
+# https://github.com/iguit0/Redes-De-Computadores
+
 request_search = {
     'morpheus': 'Follow the white rabbit. \U0001f430',
-    'teste': 'Teste',
-    'ring': 'In the caves beneath the Misty Mountains. \U0001f48d',
-    '\U0001f436': '\U0001f43e Playing ball! \U0001f3d0',
+    'teste': 'Teste \U0001f430',
+    'test': '\U0001f48d',
+    'ring': 'In the caves beneath the Misty Mountains. \U0001f48d'
 }
-
 
 class Message:
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# https://github.com/iguit0/Redes-De-Computadores
+
 import sys
 import socket
 import selectors
@@ -8,7 +10,6 @@ import traceback
 import libclient
 
 sel = selectors.DefaultSelector()
-
 
 def create_request(action, value):
     if action == 'search':
@@ -37,7 +38,8 @@ def start_connection(host, port, request):
 
 
 if len(sys.argv) != 5:
-    print('usage:', sys.argv[0], '<host> <port> <action> <value>')
+    print('Passe todos os argumentos necessários!')
+    print('Como usar: $ python', sys.argv[0], '<host> <port> <ação> <valor>')
     sys.exit(1)
 
 host, port = sys.argv[1], int(sys.argv[2])
@@ -53,8 +55,7 @@ try:
             try:
                 message.process_events(mask)
             except Exception as e:
-                print('main: error: exception for',
-                      f'{message.addr}:\n{traceback.format_exc()}')
+                print('main: error: exception for',f'{message.addr}:\n{traceback.format_exc()}')
                 message.close()
         # Check for a socket being monitored to continue.
         if not sel.get_map():
