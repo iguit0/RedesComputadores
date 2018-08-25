@@ -11,3 +11,7 @@ Como se conectar ao chat
 $ python server.py
 $ python client.py <IP_SERVER> <PORTA>
 ```
+
+Simulador SMTP :mailbox_closed::mailbox_with_no_mail:
+------
+Simulando protocolo SMTP utilizando *sockets* e a ideia de cliente/servidor.
