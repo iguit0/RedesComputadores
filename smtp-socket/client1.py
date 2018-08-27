@@ -24,4 +24,5 @@ ClientSock.send(j.encode("utf-8"))
 ServerMessage = ClientSock.recv(1000)
 print('(OK) Mensagem enviada!')
 print('\tConteúdo da mensagem --> '+ServerMessage.decode('utf-8'))
+
 ClientSock.close()
