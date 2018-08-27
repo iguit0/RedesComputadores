@@ -11,19 +11,19 @@ while True:
 	menu = input('Option: ')
 	if menu == '1':
 		client = Client()
-		dest = input('Destination: ')
+		#dest = input('Destination: ')
 		msg = input('Type your message:')
 		data = {
 			'act': 'send',
-			'dest': dest,
+			'dest': 2,
 			'msg': msg
 		}
 		print(data)
 		response = client.connect(host, port).send(data).recv()
 		client.close()
-		if response == {'status': 'ok'}:
+		if response['status'] == 'ok':
 			print('Mensagem Transmitida com Sucesso')
-		if response == {'status': 'error'}:
+		else:
 			print('Erro ao Transmitir Mensagem')
 
 	if menu == '2':
