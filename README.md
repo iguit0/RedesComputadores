@@ -15,3 +15,12 @@ $ python client.py <IP_SERVER> <PORTA>
 Simulador SMTP :mailbox_closed::mailbox_with_no_mail:
 ------
 Simulando protocolo SMTP utilizando *sockets* e a ideia de cliente/servidor.
+Cliente 1 conecta no server 1 e envia payload. Server 1 serve o cliente 1.
+Server 2 serve o "cliente" do server 1 e depois serve para o cliente 2 se conectar a ele.
+```
+Rodar, respectivamente, nesta ordem: servidor 2, servidor 1, cliente 1 e cliente 2.
+$ python server2.py
+$ python server1.py
+$ python cliente1.py
+$ python cliente2.py
+```
