@@ -2,26 +2,22 @@
 
 # CLIENTE 2
 
+# https://github.com/iguit0/Redes-De-Computadores
+
 import socket
 import json
 
 serverhost2 = '127.0.0.1'
-serverport2 = 8001
+
+clientport = 8003
 
 ClientSock2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-ClientSock2.connect((serverhost2, serverport2))
+ClientSock2.connect((serverhost2, clientport))
 print('\t\t\t(@) Cliente 2')
-msg2 = input('(#) Digite sua mensagem: ')
 
-d2 = {
-    "verb": "sendto",
-    "payload": msg2
-}
-
-j2 = json.dumps(d2)
-
-ClientSock2.send(j2.encode("utf-8"))
-ServerMessage = ClientSock2.recv(1000)
-print('(OK) Mensagem enviada!')
-print('\tConteúdo da mensagem --> '+ServerMessage.decode('utf-8'))
-ClientSock2.close()
+print('(WAIT) Esperando msg do cliente 1...')
+ServerMessage2 = ClientSock2.recv(1000)
+ClientSock2.send(ServerMessage2)
+d2 = json.loads(ServerMessage2)
+print('(OK) Mensagem recebida!')
+print('\tConteúdo da mensagem --> ',d2)
