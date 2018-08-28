@@ -2,19 +2,24 @@
 
 # CLIENTE 1
 
+# https://github.com/iguit0/Redes-De-Computadores
+
 import socket
 import json
+import datetime
 
 serverhost1 = '127.0.0.1'
 serverport1 = 8000
 
 ClientSock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ClientSock.connect((serverhost1, serverport1))
+
 print('\t\t\t(@) Cliente 1')
 msg = input('(#) Digite sua mensagem: ')
 
 d = {
     "verb": "sendto",
+    "timestamp": str(datetime.datetime.now()),
     "payload": msg
 }
 
