@@ -28,3 +28,7 @@ $ python server1.py
 $ python cliente1.py
 $ python cliente2.py
 ```
+
+Servidor/Cliente UDP
+------
+Servidor/Cliente usando biblioteca [*sockets*](https://pt.wikipedia.org/wiki/Soquete_de_rede) e protocolo UDP, na qual devemos implementar um temporizador, e verificar se a mensagem chegou dentro de determinado tempo, se não tiver chegado enviamos novamente.
