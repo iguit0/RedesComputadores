@@ -29,6 +29,6 @@ $ python cliente1.py
 $ python cliente2.py
 ```
 
-Servidor/Cliente UDP
+Servidor/Cliente UDP :package::thumbsup:
 ------
-Servidor/Cliente usando biblioteca [*sockets*](https://pt.wikipedia.org/wiki/Soquete_de_rede) e protocolo UDP, na qual devemos implementar um temporizador, e verificar se a mensagem chegou dentro de determinado tempo, se não tiver chegado enviamos novamente.
+Servidor/Cliente usando biblioteca *sockets* e [protocolo UDP](https://pt.wikipedia.org/wiki/User_Datagram_Protocol), na qual devemos implementar um temporizador, e verificar se a mensagem chegou dentro de determinado tempo, se não tiver chegado enviamos novamente.
