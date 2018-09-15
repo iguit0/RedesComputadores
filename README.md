@@ -33,6 +33,6 @@ Servidor/Cliente UDP :package::thumbsup:
 ------
 Servidor/Cliente usando biblioteca *sockets* e [protocolo UDP](https://pt.wikipedia.org/wiki/User_Datagram_Protocol), na qual devemos implementar um temporizador, e verificar se a mensagem chegou dentro de determinado tempo, se não tiver chegado enviamos novamente.
 
-Estado de enlace (usando caminho mínimo de Dijkstra) :arrows_counterclockwise::soon:
+Algoritmo de roteamento (usando caminho mínimo de Dijkstra) :arrows_counterclockwise::soon:
 ------
 Em breve...
