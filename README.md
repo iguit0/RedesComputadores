@@ -29,9 +29,9 @@ $ python cliente1.py
 $ python cliente2.py
 ```
 
-Servidor/Cliente UDP :package::thumbsup:
+UDP RDT (Reliable Data Transfer) :package::thumbsup:
 ------
-Servidor/Cliente usando biblioteca *sockets* e [protocolo UDP](https://pt.wikipedia.org/wiki/User_Datagram_Protocol), na qual devemos implementar um temporizador, e verificar se a mensagem chegou dentro de determinado tempo, se não tiver chegado enviamos novamente.
+Em breve...
 
 Algoritmo de roteamento (usando caminho mínimo de Dijkstra) :arrows_counterclockwise::soon:
 ------
