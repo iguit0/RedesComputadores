@@ -31,7 +31,7 @@ $ python cliente2.py
 
 UDP RDT (Reliable Data Transfer) :package::thumbsup:
 ------
-Em breve...
+Com um canal confiável, nenhum dos dados transferidos é corrompido ou perdido, e todos são entregues na ordem em que foram enviados. É responsabilidade de um protocolo de transferência confiável de dados implementar essa abstração de serviço.
 
 Algoritmo de roteamento (usando caminho mínimo de Dijkstra) :arrows_counterclockwise::soon:
 ------
