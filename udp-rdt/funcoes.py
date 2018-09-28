@@ -43,3 +43,12 @@ def checksum(portaorigem,portadestino,comprimento):
 		segundasoma = bin(int(segundasoma,2) + 1)[2:].zfill(16)
 	checksum = complemento(int(segundasoma,2),16)[2:]
 	return int(checksum,2)
+
+def cria_pacote_cliente(portaorigem,portadestino,comprimento,soma,seq,dado):
+	pacote = bin(portaorigem)[2:].zfill(16)+bin(portadestino)[2:].zfill(16)+bin(comprimento)[2:].zfill(16)+bin(soma)[2:].zfill(16)+bin(seq)[2:].zfill(1)+bin(dado)[2:].zfill(32)
+	return pacote
+
+def cria_pacote_servidor(portaorigem,portadestino,comprimento,ack,seq):
+	soma = checksum(portaorigem,portadestino,comprimento)
+	pacote = bin(portaorigem)[2:].zfill(16)+bin(portadestino)[2:].zfill(16)+bin(comprimento)[2:].zfill(16)+bin(ack)[2:].zfill(1)+bin(seq)[2:].zfill(1)+bin(soma)[2:].zfill(16)
+	return pacote

@@ -20,6 +20,7 @@ received_data = []
 ordered_received_data = []
 duplicated_data = []
 corrupted_data = []
+i=0
 
 msgFromServer = "SERVIDOR RECEBEU!" # msg do servidor
 
@@ -39,6 +40,17 @@ oncethru = 0
 
 while True:
     (message, address) = UDPServerSocket.recvfrom(bufferSize) # recebe do cliente
+
+    if not message:
+        break
+
+    i+=1
+    print("\n------------------------------------------")
+    print("\tEnvio do", i, "º pacote")
+    print("------------------------------------------")
+
+    # Extrair dados do pacote
+
     if message:
         message = message.decode() # descodifica a msg recebida
         message = format(message).upper() # msg em caixa alta
