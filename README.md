@@ -33,6 +33,7 @@ UDP RDT (Reliable Data Transfer) :package::thumbsup:
 ------
 Com um canal confiável, nenhum dos dados transferidos é corrompido ou perdido, e todos são entregues na ordem em que foram enviados. É responsabilidade de um protocolo de transferência confiável de dados implementar essa abstração de serviço.
 
-Algoritmo de roteamento (usando caminho mínimo de Dijkstra) :arrows_counterclockwise::soon:
+Algoritmo de roteamento de estado de enlace (LS) :arrows_counterclockwise::soon:
 ------
-Em breve...
+Do inglês [*link state routing protocol*](https://en.wikipedia.org/wiki/Link-state_routing_protocol) é um dos dois principais classes de protocolos de roteamento usados em redes de comutação de pacotes. 
+O Algoritmo de roteamento de estado de enlace é executado por cada nó de comutação na rede (isto é, nós preparados para encaminhar pacotes; na Internet, esses são chamados de roteadores). O conceito básico é que cada nó constrói um mapa da conectividade com a rede, na forma de um grafo, mostrando quais nós estão conectados a quais outros nós. Cada nó calcula, de forma independente, o melhor caminho lógico seguinte para cada destino possível na rede. Cada coleção de melhores caminhos formará a tabela de roteamento de cada nó.
