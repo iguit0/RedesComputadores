@@ -49,7 +49,33 @@ while True:
     print("\tEnvio do", i, "º pacote")
     print("------------------------------------------")
 
-    # Extrair dados do pacote
+    # Extraindo dados do pacote
+	portaorigem = int(message[0:16],2)
+	portadestino = int(message[16:32],2)
+	comprimento = int(message[32:48],2)
+	checksum = int(message[48:64],2)
+	seq = int(message[64:65],2)
+	dadoanterior = dado
+	dado = int(message[65:97],2)
+
+    soma = funcoes.checksum(portaorigem, portadestino, comprimento)
+
+    if seq == 1:
+        print("\nPacote ["+str(dadoanterior)+"] duplicado! Descartando e re-solicitando...")
+        corrupted_data.append(dadoanterior)
+    if soma != checksum:
+        print("\nPacote [" + str(dado) + "] com erro de bits! Descartando e re-solicitando...")
+        corrupted_data.append(dado)
+
+    while seq == 1 or soma != checksum:
+        if oncethru == 1:
+            try:
+            # Enviando mensagem ao cliente informando pacote duplicado/corrompido
+                UDPServerSocket.sendto(message, address)
+            except socket.error as msg:
+                print("\nErro: " + str(msg) + "...")
+                sys.exit()
+
 
     if message:
         message = message.decode() # descodifica a msg recebida
@@ -61,4 +87,5 @@ while True:
         print(clientIP)
         print(clientMsg)
 
-        UDPServerSocket.sendto(msgFromServer.encode(), address) # enviando uma resposta ao cliente
+        # enviando uma resposta ao cliente
+        UDPServerSocket.sendto(msgFromServer.encode(), address)
