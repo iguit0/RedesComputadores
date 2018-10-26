@@ -35,7 +35,6 @@ Com um canal confiável, nenhum dos dados transferidos é corrompido ou perdido,
 
 Caminho Mínimo de Roteamento (Dijkstra) :arrows_counterclockwise::soon:
 ------
-[*Link state routing protocol*](https://en.wikipedia.org/wiki/Link-state_routing_protocol) é um dos dois principais protocolos de roteamento usados em redes de comutação de pacotes.
 O **[Caminho Mínimo de Roteamento](./CaminhoMinimoRoteamento/codigo.py)** é executado por cada nó de comutação na rede (isto é, nós preparados para encaminhar pacotes; na Internet, esses são chamados de roteadores). O conceito básico é que cada nó constrói um mapa da conectividade com a rede, na forma de um grafo, mostrando quais nós estão conectados a quais outros nós. Cada nó calcula, de forma independente, o melhor caminho lógico seguinte para cada destino possível na rede. Cada coleção de melhores caminhos formará a tabela de roteamento de cada nó. Sua essência é o algoritmo de Dijkstra.
 
 ```
