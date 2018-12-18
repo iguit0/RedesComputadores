@@ -29,7 +29,7 @@ $ python cliente1.py
 $ python cliente2.py
 ```
 
-UDP RDT (Reliable Data Transfer) :package::thumbsup:
+UDP RDT (*Reliable Data Transfer*) :package::thumbsup:
 ------
 Com um canal confiável, nenhum dos dados transferidos é corrompido ou perdido, e todos são entregues na ordem em que foram enviados. É responsabilidade de um protocolo de transferência confiável de dados implementar essa abstração de serviço. A aplicação cliente-servidor implementada provê a transferência confiável baseado no protocolo rdt 2.2. Nesta versão do protocolo, não se usa implementa a detecção de perda de pacotes (tanto de dados quanto ACKs) por meio de um temporizador. Adicionando-se essa funcionalidade, teria-se o protocolo rdt 3.0 implementado
 
