@@ -19,7 +19,6 @@ Neste problema replicamos o [protocolo SMTP](https://pt.wikipedia.org/wiki/Simpl
 2. **Server 1** age como "cliente" e se conecta no **Server 2** (Servidor de correio do Bob) e envia a mensagem de Alice.
 3. **[Client 2](./smtp-socket/client2.py) (Bob)** se conecta no **[Server 2](./smtp-socket/server2.py)**, e então o mesmo envia a mensagem para Bob.
 <br/>
-<img align="center" src="http://imagem.b2s-space.com/upimg/60505/0/e235c8edfb.jpeg"><br/>
 
 ```
 Rodar, respectivamente, nesta ordem: servidor 2, servidor 1, cliente 1 e cliente 2.
