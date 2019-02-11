@@ -8,8 +8,8 @@ Chat-Server :bust_in_silhouette::speech_balloon:
 Servidor/Cliente usando biblioteca [*sockets*](https://pt.wikipedia.org/wiki/Soquete_de_rede) na qual recebe conexões de entrada (novos usuários) e dados (mensagens trocadas).
 ```
 Como se conectar ao chat
-$ python server.py
-$ python client.py <IP_SERVER> <PORTA>
+$ python3 server.py
+$ python3 client.py <IP_SERVER> <PORTA>
 ```
 
 Simulador SMTP :mailbox_closed::inbox_tray:
@@ -30,15 +30,16 @@ $ python cliente2.py
 
 UDP RDT (*Reliable Data Transfer*) :package::thumbsup:
 ------
-Com um canal confiável, nenhum dos dados transferidos é corrompido ou perdido, e todos são entregues na ordem em que foram enviados. É responsabilidade de um protocolo de transferência confiável de dados implementar essa abstração de serviço. A aplicação cliente-servidor implementada provê a transferência confiável baseado no protocolo rdt 2.2. Nesta versão do protocolo, não se usa implementa a detecção de perda de pacotes (tanto de dados quanto ACKs) por meio de um temporizador. Adicionando-se essa funcionalidade, teria-se o protocolo rdt 3.0 implementado
+Com um canal confiável, nenhum dos dados transferidos é corrompido ou perdido, e todos são entregues na ordem em que foram enviados. É responsabilidade de um protocolo de transferência confiável de dados implementar essa abstração de serviço. A aplicação cliente-servidor implementada provê a transferência confiável baseado no protocolo rdt 2.2. Nesta versão do protocolo, não se usa implementa a detecção de perda de pacotes (tanto de dados quanto ACKs) por meio de um temporizador. Adicionando-se essa funcionalidade, teria-se o protocolo rdt 3.0 implementado.
 
 Caminho Mínimo de Roteamento (Dijkstra) :arrows_counterclockwise::soon:
 ------
 O **[Caminho Mínimo de Roteamento](./CaminhoMinimoRoteamento/codigo.py)** é executado por cada nó de comutação na rede (isto é, nós preparados para encaminhar pacotes; na Internet, esses são chamados de roteadores). O conceito básico é que cada nó constrói um mapa da conectividade com a rede, na forma de um grafo, mostrando quais nós estão conectados a quais outros nós. Cada nó calcula, de forma independente, o melhor caminho lógico seguinte para cada destino possível na rede. Cada coleção de melhores caminhos formará a tabela de roteamento de cada nó. É o algoritmo de Dijkstra.
 
-<img align="center" src="http://aprogrammerwrites.eu/wp-content/uploads/2015/04/Dijkstra-network.jpg">
+<img align="center" src="http://aprogrammerwrites.eu/wp-content/uploads/2015/04/Dijkstra-network.jpg"/>
+<span align="center">Exemplo de um caminho mínimo</span>
 
 ```
 $ source venv\bin\activate
-$ python codigo.py
+$ python3 codigo.py
 ```
