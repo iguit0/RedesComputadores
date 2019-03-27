@@ -1,4 +1,5 @@
-# Redes de Computadores :mag_right::globe_with_meridians::computer:
+<h1 align="center">Redes de Computadores :mag_right::globe_with_meridians::computer:</h1>
+
 <img align="left" width="200" height="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Gnome-preferences-system-network.svg/200px-Gnome-preferences-system-network.svg.png">
 
 O assunto **redes de computadores** é bastante vasto e complexo, envolvendo muitos conceitos, protocolos e tecnologias que se entrelaçam inextricavelmente. Neste repositório contém problemas propostos em sala para o estudo de redes. Baseado no livro [Redes de computadores e a internet uma abordagem *top-down*](https://www.amazon.com.br/Redes-Computadores-Internet-Abordagem-Top-Down/dp/8581436773) por [Jim Kurose](https://en.wikipedia.org/wiki/Jim_Kurose) e [Keith Ross](https://en.wikipedia.org/wiki/Keith_W._Ross).
